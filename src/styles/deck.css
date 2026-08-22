@@ -639,12 +639,12 @@ table.data tr:last-child td { border-bottom: none; }
   align-items: center;
   gap: 16px;
   background: var(--black);
-  padding: 10px 18px;
+  padding: 12px 20px;
   z-index: 100;
 }
 .nav-btn {
-  width: 36px;
-  height: 36px;
+  width: 52px;
+  height: 52px;
   border: 1px solid rgba(255,255,255,.25);
   background: transparent;
   color: white;
@@ -652,8 +652,10 @@ table.data tr:last-child td { border-bottom: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  font-size: 22px;
+  flex-shrink: 0;
   transition: background .2s;
+  touch-action: manipulation;
 }
 .nav-btn:hover { background: var(--green); border-color: var(--green); }
 #slide-label { color: rgba(255,255,255,.85); font-size: 12px; font-weight: 500; min-width: 160px; }
@@ -703,7 +705,7 @@ table.data tr:last-child td { border-bottom: none; }
   }
 
   .slide-body {
-    padding: 24px 20px 96px;
+    padding: 24px 20px 104px;
     overflow: visible;
   }
 
@@ -938,8 +940,8 @@ table.data tr:last-child td { border-bottom: none; }
     transform: none;
     width: auto;
     max-width: none;
-    padding: 8px 12px;
-    gap: 10px;
+    padding: 10px 14px;
+    gap: 12px;
     border-radius: 0;
   }
 
@@ -958,9 +960,9 @@ table.data tr:last-child td { border-bottom: none; }
   }
 
   .nav-btn {
-    width: 40px;
-    height: 40px;
-    touch-action: manipulation;
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
   }
 
   .stat-card .num {
@@ -1009,7 +1011,7 @@ table.data tr:last-child td { border-bottom: none; }
   }
 
   .slide-body {
-    padding: 20px 16px 88px;
+    padding: 20px 16px 96px;
   }
 
   .chaos-grid {
@@ -1079,14 +1081,14 @@ table.data tr:last-child td { border-bottom: none; }
   }
 
   #nav {
-    padding: 6px 10px;
-    gap: 8px;
+    padding: 8px 12px;
+    gap: 10px;
   }
 
   .nav-btn {
-    width: 36px;
-    height: 36px;
-    font-size: 14px;
+    width: 52px;
+    height: 52px;
+    font-size: 22px;
   }
 }
 
