@@ -629,6 +629,13 @@ table.data tr:last-child td { border-bottom: none; }
   font-style: italic;
 }
 
+.bimi-slide-logo {
+  width: min(360px, 55vw);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
 /* Nav */
 #nav {
   position: fixed;
@@ -983,6 +990,10 @@ table.data tr:last-child td { border-bottom: none; }
   .pain-list li {
     font-size: 13px;
     padding: 8px 0 8px 18px;
+  }
+
+  .bimi-slide-logo {
+    width: min(280px, 70vw);
   }
 }
 
