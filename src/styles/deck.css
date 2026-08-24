@@ -645,6 +645,196 @@ table.data tr:last-child td { border-bottom: none; }
   object-fit: contain;
 }
 
+/* Demo photos & scenarios */
+.demo-photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+}
+.demo-photo-grid--3 { grid-template-columns: repeat(3, 1fr); }
+.demo-photo {
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--gray-50);
+}
+.demo-photo img {
+  display: block;
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+.demo-photo--tall img { height: 180px; }
+.demo-photo-caption {
+  padding: 8px 10px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--gray-700);
+  text-align: center;
+  line-height: 1.35;
+}
+.demo-photo-caption span {
+  display: block;
+  font-size: 9px;
+  font-weight: 500;
+  color: var(--gray-500);
+  margin-top: 2px;
+}
+
+.lanyard-card-mini {
+  width: 88px;
+  background: white;
+  border: 1px solid var(--gray-300);
+  border-radius: 6px;
+  padding: 6px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+.lanyard-card-mini .lanyard-strap {
+  width: 4px;
+  height: 28px;
+  background: var(--green);
+  margin: 0 auto 4px;
+  border-radius: 2px;
+}
+.lanyard-card-mini .lanyard-qr {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 4px;
+  border: 2px solid var(--black);
+  background: white;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  padding: 3px;
+}
+.lanyard-card-mini .lanyard-qr span { background: var(--black); }
+.lanyard-card-mini .lanyard-qr span.off { background: transparent; }
+.lanyard-card-mini .lanyard-name {
+  font-size: 7px;
+  font-weight: 700;
+  color: var(--black);
+  line-height: 1.2;
+}
+
+.platform-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.platform-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: white;
+}
+.platform-badge--wa { background: #25D366; }
+.platform-badge--fb { background: #1877F2; }
+.platform-badge--ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.platform-badge--google { background: #4285F4; }
+.platform-badge--sms { background: var(--green-dark); }
+.platform-badge--web { background: #111; }
+
+.api-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--green-dark);
+  background: rgba(0,204,153,.12);
+  padding: 6px 12px;
+  border: 1px solid rgba(0,204,153,.35);
+  margin-bottom: 12px;
+}
+
+.feature-showcase-img {
+  width: 100%;
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+  display: block;
+  object-fit: cover;
+}
+
+.social-campaign-mock {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-top: 12px;
+}
+.social-post {
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  font-size: 9px;
+}
+.social-post-head {
+  padding: 8px 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.social-post-head .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.social-post-body {
+  padding: 0 10px 10px;
+  color: var(--gray-700);
+  line-height: 1.45;
+}
+.social-post-img {
+  height: 70px;
+  background: linear-gradient(135deg, #e8f5f0, #d0ebe3);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  font-weight: 600;
+  color: var(--green-dark);
+}
+
+.wa-bulk-preview {
+  background: #ECE5DD;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 10px;
+}
+.wa-bulk-stat {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+.wa-bulk-stat div {
+  flex: 1;
+  background: white;
+  padding: 8px;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 9px;
+}
+.wa-bulk-stat .n {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--green-dark);
+}
+
+.ops-wa-note {
+  font-size: 11px;
+  color: var(--gray-500);
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
 /* Nav */
 #nav {
   position: fixed;
@@ -1003,6 +1193,24 @@ table.data tr:last-child td { border-bottom: none; }
 
   .bimi-slide-logo {
     width: min(280px, 70vw);
+  }
+
+  .demo-photo-grid,
+  .demo-photo-grid--3 {
+    grid-template-columns: 1fr;
+  }
+
+  .demo-photo img,
+  .demo-photo--tall img {
+    height: 160px;
+  }
+
+  .social-campaign-mock {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-showcase-img {
+    max-height: 220px;
   }
 }
 
