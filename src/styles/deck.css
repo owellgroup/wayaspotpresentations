@@ -512,8 +512,280 @@ h2.title {
   letter-spacing: .06em;
   margin-bottom: 8px;
 }
-.sms-mock-card .phone { width: 100%; max-width: 180px; margin: 0 auto; }
+.sms-mock-card .phone { width: 100%; max-width: 200px; margin: 0 auto; }
 .sms-mock-card .phone-screen { min-height: 300px; }
+
+/* Premium phone mockups */
+.phone--pro { width: 240px; }
+.phone--pro .phone-frame {
+  background: linear-gradient(145deg, #2a2a2a, #0f0f0f);
+  border-radius: 32px;
+  padding: 11px;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.08),
+    0 24px 48px rgba(0,0,0,.22),
+    0 8px 16px rgba(0,0,0,.12);
+}
+.phone--pro .phone-screen {
+  border-radius: 22px;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+}
+.phone--pro .phone-notch {
+  height: 28px;
+  background: #000;
+  border-radius: 22px 22px 0 0;
+  position: relative;
+}
+.phone--pro .phone-notch span {
+  width: 72px;
+  height: 5px;
+  background: #222;
+  border-radius: 3px;
+}
+
+/* Native offline SMS screen */
+.sms-native-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #f2f2f7;
+  min-height: 0;
+}
+.phone-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 14px 2px;
+  font-size: 9px;
+  font-weight: 600;
+  color: #111;
+  background: #f2f2f7;
+}
+.phone-status-bar .status-icons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 8px;
+  letter-spacing: .5px;
+}
+.sms-native-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px 10px;
+  background: #f2f2f7;
+  border-bottom: 1px solid #d1d1d6;
+}
+.sms-native-toolbar .back {
+  font-size: 18px;
+  color: #007aff;
+  line-height: 1;
+  font-weight: 400;
+}
+.sms-native-toolbar .contact {
+  flex: 1;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #111;
+  margin-right: 18px;
+}
+.sms-native-thread {
+  flex: 1;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 4px;
+}
+.sms-native-date {
+  text-align: center;
+  font-size: 8px;
+  font-weight: 600;
+  color: #8e8e93;
+  margin-bottom: 8px;
+  letter-spacing: .02em;
+}
+.sms-native-bubble {
+  align-self: flex-start;
+  max-width: 92%;
+  background: #e5e5ea;
+  color: #111;
+  padding: 10px 12px;
+  border-radius: 18px;
+  border-bottom-left-radius: 4px;
+  font-size: 10px;
+  line-height: 1.5;
+  box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+.sms-native-bubble strong {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.sms-native-bubble .sms-link {
+  display: block;
+  margin-top: 8px;
+  color: #007aff;
+  font-weight: 600;
+  font-size: 9px;
+  word-break: break-all;
+}
+.sms-native-time {
+  align-self: flex-start;
+  font-size: 8px;
+  color: #8e8e93;
+  margin-top: 2px;
+  padding-left: 4px;
+}
+.sms-native-footer {
+  padding: 8px 12px 10px;
+  background: #f2f2f7;
+  border-top: 1px solid #d1d1d6;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sms-native-footer .input-fake {
+  flex: 1;
+  background: white;
+  border: 1px solid #c7c7cc;
+  border-radius: 18px;
+  padding: 7px 12px;
+  font-size: 9px;
+  color: #8e8e93;
+}
+
+/* Polished WhatsApp chat screen */
+.wa-chat-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #e5ddd5 url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4cdc4' fill-opacity='0.45'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+  min-height: 0;
+}
+.wa-chat-header {
+  background: #075e54;
+  color: white;
+  padding: 8px 10px 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.wa-chat-header .wa-back {
+  font-size: 16px;
+  opacity: .9;
+  line-height: 1;
+}
+.wa-chat-header .wa-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.wa-chat-header .wa-contact {
+  flex: 1;
+  min-width: 0;
+}
+.wa-chat-header .wa-contact-name {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.wa-chat-header .wa-contact-sub {
+  font-size: 9px;
+  opacity: .75;
+  margin-top: 1px;
+}
+.wa-chat-body {
+  flex: 1;
+  padding: 12px 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.wa-chat-date {
+  align-self: center;
+  background: rgba(255,255,255,.85);
+  color: #54656f;
+  font-size: 8px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.06);
+}
+.wa-chat-body .wa-event-card {
+  align-self: flex-start;
+  max-width: 88%;
+}
+.wa-event-card img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  display: block;
+}
+.wa-event-card-body {
+  padding: 10px 12px;
+  font-size: 10px;
+  line-height: 1.45;
+  color: #111;
+}
+.wa-event-card-body .wa-event-tag {
+  display: inline-block;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #075e54;
+  background: rgba(7,94,84,.1);
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-bottom: 6px;
+}
+.wa-event-card-body strong {
+  display: block;
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+.wa-event-card .event-register-btn {
+  margin-top: 8px;
+  font-size: 10px;
+  padding: 9px;
+}
+.wa-bubble--out {
+  align-self: flex-end;
+}
+.wa-bubble-meta {
+  align-self: flex-end;
+  font-size: 8px;
+  color: #667781;
+  margin-top: -2px;
+  padding-right: 4px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.wa-phone-showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.wa-phone-showcase .phone--pro {
+  width: 260px;
+}
 
 /* WhatsApp form mock */
 .wa-form-screen {
@@ -860,6 +1132,13 @@ h2.title {
 }
 .wa-bubble--in { background: white; margin-right: auto; border-top-left-radius: 0; }
 .wa-bubble--out { background: #DCF8C6; margin-left: auto; border-top-right-radius: 0; }
+.wa-chat-body .wa-bubble {
+  margin: 0;
+  max-width: 88%;
+  box-shadow: 0 1px 1px rgba(0,0,0,.08);
+}
+.wa-chat-body .wa-bubble--in { align-self: flex-start; }
+.wa-chat-body .wa-bubble--out { align-self: flex-end; background: #dcf8c6; box-shadow: 0 1px 1px rgba(0,0,0,.06); }
 .wa-time { font-size: 9px; color: var(--gray-500); margin-top: 4px; text-align: right; }
 
 .qr-block {
@@ -1607,6 +1886,15 @@ table.data tr:last-child td { border-bottom: none; }
   .campaign-dual-mock {
     flex-direction: column;
     align-items: center;
+  }
+
+  .phone--pro,
+  .wa-phone-showcase .phone--pro {
+    width: min(240px, 72vw);
+  }
+
+  .phone--pro .phone-screen {
+    min-height: 360px;
   }
 
   .grid-4[style*="grid-template-columns"] {
