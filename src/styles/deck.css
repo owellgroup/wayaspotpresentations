@@ -252,12 +252,36 @@ h2.title {
 .grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
 .flex-1 { flex: 1; min-width: 0; }
 
+.product-modules {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 14px;
+  flex: 1;
+  min-height: 0;
+  align-content: start;
+}
 .card {
   border: 1px solid var(--gray-300);
   background: var(--white);
   padding: 20px 22px;
 }
 .card--fill { background: var(--gray-50); }
+.card--compact {
+  padding: 12px 14px;
+}
+.card--compact h3 {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+.card--compact p {
+  font-size: 12px;
+  line-height: 1.4;
+}
+.card--compact .label {
+  font-size: 10px;
+  margin-bottom: 4px;
+}
 .card h3 {
   font-size: 15px;
   font-weight: 700;
@@ -514,6 +538,17 @@ h2.title {
 }
 .sms-mock-card .phone { width: 100%; max-width: 200px; margin: 0 auto; }
 .sms-mock-card .phone-screen { min-height: 300px; }
+.sms-mock-card .wa-msg-card,
+.sms-mock-card .wa-msg-actions {
+  max-width: 100%;
+  width: 100%;
+}
+.sms-mock-card .wa-msg-card img {
+  height: 78px;
+}
+.sms-mock-card .wa-chat-composer {
+  display: none;
+}
 
 /* Premium phone mockups */
 .phone--pro { width: 240px; }
@@ -667,68 +702,215 @@ h2.title {
   background: #e5ddd5 url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4cdc4' fill-opacity='0.45'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
   min-height: 0;
 }
+.wa-chat-screen > .phone-status-bar {
+  background: #075e54;
+  color: rgba(255,255,255,.9);
+  padding: 6px 14px 2px;
+  flex-shrink: 0;
+}
 .wa-chat-header {
   background: #075e54;
   color: white;
-  padding: 8px 10px 10px;
+  padding: 6px 10px 10px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   flex-shrink: 0;
 }
 .wa-chat-header .wa-back {
-  font-size: 16px;
-  opacity: .9;
+  font-size: 20px;
+  opacity: .95;
   line-height: 1;
+  font-weight: 300;
 }
 .wa-chat-header .wa-avatar {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
-  background: rgba(255,255,255,.2);
+  background: rgba(255,255,255,.22);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 13px;
   font-weight: 700;
   flex-shrink: 0;
+  overflow: hidden;
+}
+.wa-chat-header .wa-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .wa-chat-header .wa-contact {
   flex: 1;
   min-width: 0;
 }
 .wa-chat-header .wa-contact-name {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.wa-chat-header .wa-verified {
+  display: inline-flex;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #53bdeb;
+  color: white;
+  font-size: 8px;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 .wa-chat-header .wa-contact-sub {
   font-size: 9px;
   opacity: .75;
   margin-top: 1px;
 }
+.wa-chat-header .wa-header-actions {
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+  opacity: .9;
+  margin-left: 4px;
+}
 .wa-chat-body {
   flex: 1;
-  padding: 12px 10px;
+  padding: 10px 8px 8px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 6px;
+  justify-content: flex-end;
 }
 .wa-chat-date {
   align-self: center;
-  background: rgba(255,255,255,.85);
+  background: rgba(255,255,255,.92);
   color: #54656f;
   font-size: 8px;
   font-weight: 600;
   padding: 4px 10px;
   border-radius: 6px;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   box-shadow: 0 1px 1px rgba(0,0,0,.06);
 }
+.wa-msg-card {
+  align-self: flex-start;
+  width: 92%;
+  max-width: 220px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0,0,0,.14);
+}
+.wa-msg-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  display: block;
+  background: #ddd;
+}
+.wa-msg-card-body {
+  padding: 9px 11px 6px;
+  font-size: 10px;
+  line-height: 1.45;
+  color: #111;
+}
+.wa-msg-card-body .wa-event-tag {
+  display: inline-block;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #075e54;
+  background: rgba(7,94,84,.1);
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+.wa-msg-card-body strong {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+.wa-msg-card-body p {
+  margin: 0;
+  color: #3b4a54;
+  font-size: 10px;
+}
+.wa-msg-card-body .wa-price {
+  font-weight: 700;
+  color: #111;
+}
+.wa-msg-card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3px;
+  padding: 0 8px 5px;
+  font-size: 8px;
+  color: #667781;
+}
+.wa-msg-actions {
+  align-self: flex-start;
+  width: 92%;
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.wa-msg-action {
+  background: white;
+  color: #027eb5;
+  text-align: center;
+  padding: 9px 10px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+.wa-chat-composer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px 8px;
+  background: #f0f2f5;
+  flex-shrink: 0;
+}
+.wa-chat-composer .wa-composer-input {
+  flex: 1;
+  background: white;
+  border-radius: 20px;
+  padding: 7px 12px;
+  font-size: 9px;
+  color: #667781;
+}
+.wa-chat-composer .wa-mic {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #00a884;
+  flex-shrink: 0;
+  position: relative;
+}
+.wa-chat-composer .wa-mic::before {
+  content: "";
+  position: absolute;
+  inset: 7px 10px 9px;
+  border: 2px solid white;
+  border-radius: 8px 8px 6px 6px;
+  border-bottom-width: 3px;
+}
+
+/* legacy aliases */
 .wa-chat-body .wa-event-card {
   align-self: flex-start;
-  max-width: 88%;
+  max-width: 92%;
 }
 .wa-event-card img {
   width: 100%;
@@ -785,6 +967,18 @@ h2.title {
 }
 .wa-phone-showcase .phone--pro {
   width: 260px;
+}
+.device-shot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.device-shot img {
+  max-height: 560px;
+  width: auto;
+  max-width: 100%;
+  border-radius: 28px;
+  box-shadow: 0 24px 48px rgba(0,0,0,.2);
 }
 
 /* WhatsApp form mock */
@@ -1667,9 +1861,14 @@ table.data tr:last-child td { border-bottom: none; }
   .grid-2,
   .grid-3,
   .grid-4,
-  .grid-5 {
+  .grid-5,
+  .product-modules {
     grid-template-columns: 1fr;
     gap: 14px;
+  }
+
+  .device-shot img {
+    max-height: 420px;
   }
 
   .chaos-grid {
