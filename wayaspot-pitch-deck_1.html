@@ -571,8 +571,17 @@ h2.title {
 .price-box .price { font-size: 32px; font-weight: 700; margin: 10px 0 4px; color: var(--green-dark); }
 .price-box .period { font-size: 12px; color: var(--gray-500); margin-bottom: 14px; }
 .price-box ul { list-style: none; font-size: 12px; line-height: 1.85; color: var(--gray-700); }
-.price-box ul li { padding-left: 14px; position: relative; }
-.price-box ul li::before { content: '—'; position: absolute; left: 0; color: var(--gray-500); }
+.price-box ul li { padding-left: 16px; position: relative; }
+.price-box ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--green);
+}
 
 /* Table */
 table.data {
