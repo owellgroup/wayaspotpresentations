@@ -968,17 +968,71 @@ h2.title {
 .wa-phone-showcase .phone--pro {
   width: 260px;
 }
-.device-shot {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.wa-msg-card--product {
+  max-width: 230px;
 }
-.device-shot img {
-  max-height: 560px;
-  width: auto;
-  max-width: 100%;
-  border-radius: 28px;
-  box-shadow: 0 24px 48px rgba(0,0,0,.2);
+.wa-product-hero {
+  position: relative;
+  height: 148px;
+  overflow: hidden;
+  background: #1a3a2a;
+}
+.wa-product-hero img {
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center 38%;
+  transform: scale(1.55);
+  transform-origin: center 42%;
+  display: block;
+}
+.wa-product-badge {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  background: #1b7a4e;
+  color: white;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  padding: 4px 7px;
+  border-radius: 3px;
+  line-height: 1.2;
+  max-width: 55%;
+}
+.wa-product-price {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: #145a38;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.05;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+  padding: 4px;
+}
+.wa-product-price small {
+  font-size: 6px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  opacity: .95;
+  margin-top: 2px;
+  line-height: 1.1;
+}
+.wa-msg-card-body .wa-yes {
+  color: #027eb5;
+  font-weight: 700;
 }
 
 /* WhatsApp form mock */
