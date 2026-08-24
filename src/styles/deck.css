@@ -361,6 +361,185 @@ h2.title {
 }
 .hub-diagram svg { width: 100%; height: 100%; }
 
+.solution-flow {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 4px;
+  min-height: 0;
+  margin-top: 8px;
+}
+.solution-flow-main {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  min-height: 0;
+}
+.solution-card {
+  flex: 1;
+  border: 1px solid var(--gray-300);
+  background: var(--gray-50);
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  position: relative;
+}
+.solution-card-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--green-dark);
+  margin-bottom: 8px;
+}
+.solution-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+.solution-card p {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--gray-500);
+}
+.solution-card--core {
+  flex: 1.15;
+  background: linear-gradient(145deg, #00cc99 0%, #00b386 55%, #009977 100%);
+  border-color: transparent;
+  color: white;
+  box-shadow: 0 16px 40px rgba(0,204,153,.28);
+  text-align: center;
+  align-items: center;
+}
+.solution-card--core .solution-card-label {
+  color: rgba(255,255,255,.85);
+}
+.solution-card--core h3 {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 30px;
+  color: white;
+  margin-bottom: 10px;
+}
+.solution-card--core p {
+  color: rgba(255,255,255,.9);
+  font-size: 12.5px;
+  max-width: 260px;
+}
+.solution-outcomes {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+.solution-card--sm {
+  flex: 1;
+  padding: 12px 16px;
+}
+.solution-card--sm h3 {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.solution-card--sm p {
+  font-size: 11px;
+}
+.solution-card--sm .solution-card-label {
+  margin-bottom: 4px;
+  font-size: 9px;
+}
+.solution-card--analytics {
+  flex-direction: row;
+  align-items: center;
+  gap: 28px;
+  padding: 18px 28px;
+  background: white;
+  border: 1.5px solid var(--green);
+}
+.solution-card--analytics h3 {
+  margin-bottom: 0;
+  min-width: 110px;
+}
+.solution-card--analytics .solution-card-label {
+  position: absolute;
+  top: 12px;
+  left: 28px;
+}
+.solution-card--analytics h3 {
+  margin-top: 14px;
+}
+
+.solution-arrow {
+  flex-shrink: 0;
+  width: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green);
+  align-self: center;
+}
+.solution-arrow svg {
+  width: 56px;
+  height: 32px;
+  overflow: visible;
+}
+.solution-arrow--down {
+  width: 100%;
+  height: 44px;
+  color: var(--green-dark);
+}
+.solution-arrow--down svg {
+  width: 32px;
+  height: 44px;
+}
+.solution-arrow-line {
+  stroke-dasharray: 60;
+  animation: solution-arrow-draw 1.4s var(--ease) both;
+}
+.solution-arrow-head {
+  animation: solution-arrow-pop .5s var(--ease) .45s both;
+}
+.solution-arrow--down .solution-arrow-line {
+  stroke-dasharray: 40;
+}
+@keyframes solution-arrow-draw {
+  from { stroke-dashoffset: 60; opacity: .35; }
+  to { stroke-dashoffset: 0; opacity: 1; }
+}
+@keyframes solution-arrow-pop {
+  from { opacity: 0; transform: translateX(-4px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.solution-arrow--down .solution-arrow-head {
+  animation-name: solution-arrow-pop-down;
+}
+@keyframes solution-arrow-pop-down {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.solution-connectors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-start;
+  flex: 1;
+}
+.solution-connector {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 7px 14px;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-300);
+  color: var(--gray-700);
+}
+
+/* Legacy solution grid (unused) */
 .solution-layout {
   flex: 1;
   display: flex;
@@ -422,20 +601,6 @@ h2.title {
   padding: 16px 24px;
 }
 .solution-node--wide h3 { margin-bottom: 0; min-width: 120px; }
-.solution-connectors {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: center;
-}
-.solution-connector {
-  font-size: 11px;
-  font-weight: 600;
-  padding: 6px 14px;
-  background: white;
-  border: 1px solid var(--gray-300);
-  color: var(--gray-700);
-}
 
 /* Cover device stage */
 .cover-mockups {
@@ -968,6 +1133,207 @@ h2.title {
 .wa-phone-showcase .phone--pro {
   width: 260px;
 }
+
+/* Premium KFC / product promo phone */
+.phone--promo {
+  width: 272px;
+}
+.phone-promo-frame {
+  background: linear-gradient(160deg, #3a3a3a 0%, #141414 40%, #0a0a0a 100%);
+  border-radius: 36px;
+  padding: 12px;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.1),
+    inset 0 1px 0 rgba(255,255,255,.12),
+    0 28px 56px rgba(0,0,0,.28),
+    0 10px 20px rgba(0,0,0,.16);
+}
+.phone-promo-screen {
+  position: relative;
+  border-radius: 26px;
+  min-height: 520px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.phone-promo-island {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92px;
+  height: 24px;
+  background: #000;
+  border-radius: 20px;
+  z-index: 5;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.06);
+}
+.phone-status-bar--promo {
+  background: #075e54;
+  color: rgba(255,255,255,.92);
+  padding: 34px 16px 4px;
+  font-size: 10px;
+}
+.wa-chat-header--kfc {
+  padding: 8px 12px 12px;
+  gap: 8px;
+}
+.wa-avatar--kfc {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(145deg, #ff2d2d, #c40000);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: -.02em;
+  box-shadow: 0 2px 6px rgba(196,0,0,.35);
+}
+.wa-chat-header--kfc .wa-header-actions {
+  display: flex;
+  gap: 5px;
+  margin-left: auto;
+}
+.wa-chat-header--kfc .wa-header-actions span {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.75);
+}
+.wa-chat-body--promo {
+  justify-content: flex-start;
+  padding-top: 14px;
+  gap: 8px;
+}
+.wa-msg-card--kfc {
+  width: 94%;
+  max-width: none;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.14);
+}
+.kfc-promo-visual {
+  position: relative;
+  height: 168px;
+  overflow: hidden;
+  background: #1a0505;
+}
+.kfc-promo-visual-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 70% at 70% 60%, rgba(255,140,40,.55) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 45% at 28% 70%, rgba(255,200,80,.4) 0%, transparent 50%),
+    linear-gradient(165deg, #8b0000 0%, #5c0000 35%, #1a0505 100%);
+}
+.kfc-promo-visual-bg::before {
+  content: "";
+  position: absolute;
+  width: 78px;
+  height: 78px;
+  right: 18px;
+  bottom: 22px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 30%, #ffd27a 0%, #f0a030 35%, #c45a10 70%, #7a2e08 100%);
+  box-shadow:
+    -28px 10px 0 -14px #e8a040,
+    -46px 18px 0 -22px #d47820,
+    18px 14px 0 -20px #f5c060,
+    0 8px 20px rgba(0,0,0,.35);
+}
+.kfc-promo-visual-bg::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  bottom: 18px;
+  width: 54px;
+  height: 40px;
+  border-radius: 8px 8px 4px 4px;
+  background: linear-gradient(180deg, #f5d090 0%, #c87820 55%, #8a4510 100%);
+  box-shadow:
+    22px -2px 0 -4px #e8b050,
+    40px 4px 0 -10px #d09030,
+    0 6px 12px rgba(0,0,0,.3);
+  opacity: .95;
+}
+.kfc-promo-copy {
+  position: relative;
+  z-index: 1;
+  padding: 14px 14px 0;
+  color: white;
+}
+.kfc-promo-tag {
+  display: inline-block;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  background: #e4002b;
+  padding: 4px 8px;
+  border-radius: 3px;
+  margin-bottom: 8px;
+}
+.kfc-promo-copy strong {
+  display: block;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.1;
+  text-shadow: 0 2px 8px rgba(0,0,0,.35);
+}
+.kfc-promo-price {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 2;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ff1f3d, #b00020);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(180,0,30,.45);
+  border: 2px solid rgba(255,255,255,.25);
+}
+.kfc-promo-amount {
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+.kfc-promo-note {
+  font-size: 6px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  opacity: .92;
+  margin-top: 3px;
+  max-width: 56px;
+  line-height: 1.15;
+}
+.wa-chat-composer--promo {
+  padding: 8px 10px 12px;
+}
+.wa-composer-plus {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #fff;
+  color: #54656f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 400;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.wa-msg-card-body .wa-yes {
+  color: #027eb5;
+  font-weight: 700;
+}
+
+/* legacy product hero (unused) */
 .wa-msg-card--product {
   max-width: 230px;
 }
@@ -1029,10 +1395,6 @@ h2.title {
   opacity: .95;
   margin-top: 2px;
   line-height: 1.1;
-}
-.wa-msg-card-body .wa-yes {
-  color: #027eb5;
-  font-weight: 700;
 }
 
 /* WhatsApp form mock */
@@ -2117,6 +2479,47 @@ table.data tr:last-child td { border-bottom: none; }
     max-height: 220px;
   }
 
+  .solution-flow-main {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .solution-arrow {
+    width: 100%;
+    height: 36px;
+    transform: rotate(90deg);
+  }
+
+  .solution-arrow svg {
+    width: 40px;
+    height: 28px;
+  }
+
+  .solution-arrow--down {
+    transform: none;
+    height: 40px;
+  }
+
+  .solution-card--core h3 {
+    font-size: 24px;
+  }
+
+  .solution-card--analytics {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    padding-top: 36px;
+  }
+
+  .solution-card--analytics .solution-card-label {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .solution-connectors {
+    justify-content: center;
+  }
+
   .solution-grid {
     grid-template-columns: 1fr;
   }
@@ -2142,11 +2545,13 @@ table.data tr:last-child td { border-bottom: none; }
   }
 
   .phone--pro,
+  .phone--promo,
   .wa-phone-showcase .phone--pro {
     width: min(240px, 72vw);
   }
 
-  .phone--pro .phone-screen {
+  .phone--pro .phone-screen,
+  .phone-promo-screen {
     min-height: 360px;
   }
 
