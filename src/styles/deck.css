@@ -644,9 +644,16 @@ h2.title {
 .cover-laptop-wrap .laptop-bezel { padding: 10px 10px 0; }
 .cover-laptop-wrap .laptop-screen { aspect-ratio: 16/10; }
 .cover-phone-wrap .phone-frame {
-  box-shadow: 0 24px 60px rgba(0,0,0,.35);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.12),
+    0 24px 60px rgba(0,0,0,.35);
 }
-.cover-phone-wrap .phone-screen { min-height: 360px; }
+.cover-phone-wrap .phone-screen { min-height: 380px; }
+.cover-phone-wrap .phone-notch {
+  top: 16px;
+  width: 84px;
+  height: 24px;
+}
 
 /* QR flow explanation */
 .qr-flow-steps {
@@ -715,34 +722,20 @@ h2.title {
   display: none;
 }
 
-/* Premium phone mockups */
-.phone--pro { width: 240px; }
+/* Premium iPhone mockups */
+.phone--pro { width: 248px; }
 .phone--pro .phone-frame {
-  background: linear-gradient(145deg, #2a2a2a, #0f0f0f);
-  border-radius: 32px;
-  padding: 11px;
-  box-shadow:
-    0 0 0 1px rgba(255,255,255,.08),
-    0 24px 48px rgba(0,0,0,.22),
-    0 8px 16px rgba(0,0,0,.12);
+  border-radius: 42px;
+  padding: 12px;
 }
 .phone--pro .phone-screen {
-  border-radius: 22px;
-  min-height: 420px;
-  display: flex;
-  flex-direction: column;
+  border-radius: 32px;
+  min-height: 460px;
 }
 .phone--pro .phone-notch {
+  top: 20px;
+  width: 100px;
   height: 28px;
-  background: #000;
-  border-radius: 22px 22px 0 0;
-  position: relative;
-}
-.phone--pro .phone-notch span {
-  width: 72px;
-  height: 5px;
-  background: #222;
-  border-radius: 3px;
 }
 
 /* Native offline SMS screen */
@@ -757,11 +750,12 @@ h2.title {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4px 14px 2px;
-  font-size: 9px;
+  padding: 36px 16px 4px;
+  font-size: 10px;
   font-weight: 600;
   color: #111;
   background: #f2f2f7;
+  flex-shrink: 0;
 }
 .phone-status-bar .status-icons {
   display: flex;
@@ -870,7 +864,7 @@ h2.title {
 .wa-chat-screen > .phone-status-bar {
   background: #075e54;
   color: rgba(255,255,255,.9);
-  padding: 6px 14px 2px;
+  padding: 36px 16px 4px;
   flex-shrink: 0;
 }
 .wa-chat-header {
@@ -1131,49 +1125,9 @@ h2.title {
   gap: 12px;
 }
 .wa-phone-showcase .phone--pro {
-  width: 260px;
+  width: 268px;
 }
 
-/* Premium KFC / product promo phone */
-.phone--promo {
-  width: 272px;
-}
-.phone-promo-frame {
-  background: linear-gradient(160deg, #3a3a3a 0%, #141414 40%, #0a0a0a 100%);
-  border-radius: 36px;
-  padding: 12px;
-  box-shadow:
-    0 0 0 1px rgba(255,255,255,.1),
-    inset 0 1px 0 rgba(255,255,255,.12),
-    0 28px 56px rgba(0,0,0,.28),
-    0 10px 20px rgba(0,0,0,.16);
-}
-.phone-promo-screen {
-  position: relative;
-  border-radius: 26px;
-  min-height: 520px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-.phone-promo-island {
-  position: absolute;
-  top: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 92px;
-  height: 24px;
-  background: #000;
-  border-radius: 20px;
-  z-index: 5;
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.06);
-}
-.phone-status-bar--promo {
-  background: #075e54;
-  color: rgba(255,255,255,.92);
-  padding: 34px 16px 4px;
-  font-size: 10px;
-}
 .wa-chat-header--kfc {
   padding: 8px 12px 12px;
   gap: 8px;
@@ -1200,7 +1154,7 @@ h2.title {
 }
 .wa-chat-body--promo {
   justify-content: flex-start;
-  padding-top: 14px;
+  padding-top: 12px;
   gap: 8px;
 }
 .wa-msg-card--kfc {
@@ -1211,53 +1165,29 @@ h2.title {
 }
 .kfc-promo-visual {
   position: relative;
-  height: 168px;
+  height: 172px;
   overflow: hidden;
   background: #1a0505;
 }
-.kfc-promo-visual-bg {
+.kfc-promo-visual img {
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center 45%;
+  display: block;
+}
+.kfc-promo-visual::after {
+  content: "";
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse 80% 70% at 70% 60%, rgba(255,140,40,.55) 0%, transparent 55%),
-    radial-gradient(ellipse 50% 45% at 28% 70%, rgba(255,200,80,.4) 0%, transparent 50%),
-    linear-gradient(165deg, #8b0000 0%, #5c0000 35%, #1a0505 100%);
-}
-.kfc-promo-visual-bg::before {
-  content: "";
-  position: absolute;
-  width: 78px;
-  height: 78px;
-  right: 18px;
-  bottom: 22px;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 35% 30%, #ffd27a 0%, #f0a030 35%, #c45a10 70%, #7a2e08 100%);
-  box-shadow:
-    -28px 10px 0 -14px #e8a040,
-    -46px 18px 0 -22px #d47820,
-    18px 14px 0 -20px #f5c060,
-    0 8px 20px rgba(0,0,0,.35);
-}
-.kfc-promo-visual-bg::after {
-  content: "";
-  position: absolute;
-  left: 16px;
-  bottom: 18px;
-  width: 54px;
-  height: 40px;
-  border-radius: 8px 8px 4px 4px;
-  background: linear-gradient(180deg, #f5d090 0%, #c87820 55%, #8a4510 100%);
-  box-shadow:
-    22px -2px 0 -4px #e8b050,
-    40px 4px 0 -10px #d09030,
-    0 6px 12px rgba(0,0,0,.3);
-  opacity: .95;
+  background: linear-gradient(180deg, rgba(0,0,0,.15) 0%, transparent 40%, rgba(0,0,0,.55) 100%);
+  pointer-events: none;
 }
 .kfc-promo-copy {
-  position: relative;
-  z-index: 1;
-  padding: 14px 14px 0;
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  z-index: 2;
   color: white;
 }
 .kfc-promo-tag {
@@ -1269,22 +1199,22 @@ h2.title {
   background: #e4002b;
   padding: 4px 8px;
   border-radius: 3px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 .kfc-promo-copy strong {
   display: block;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 800;
-  line-height: 1.1;
-  text-shadow: 0 2px 8px rgba(0,0,0,.35);
+  line-height: 1.15;
+  text-shadow: 0 2px 10px rgba(0,0,0,.5);
 }
 .kfc-promo-price {
   position: absolute;
-  right: 12px;
-  bottom: 12px;
+  right: 10px;
+  bottom: 10px;
   z-index: 2;
-  width: 72px;
-  height: 72px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   background: linear-gradient(145deg, #ff1f3d, #b00020);
   color: white;
@@ -1294,7 +1224,7 @@ h2.title {
   justify-content: center;
   text-align: center;
   box-shadow: 0 4px 14px rgba(180,0,30,.45);
-  border: 2px solid rgba(255,255,255,.25);
+  border: 2px solid rgba(255,255,255,.28);
 }
 .kfc-promo-amount {
   font-size: 12px;
@@ -1308,7 +1238,7 @@ h2.title {
   letter-spacing: .02em;
   opacity: .92;
   margin-top: 3px;
-  max-width: 56px;
+  max-width: 54px;
   line-height: 1.15;
 }
 .wa-chat-composer--promo {
@@ -1402,6 +1332,10 @@ h2.title {
   background: #ECE5DD;
   min-height: 320px;
   padding-bottom: 12px;
+  padding-top: 0;
+}
+.wa-form-screen > .wa-header {
+  padding-top: 40px;
 }
 .wa-form-card {
   margin: 10px 12px;
@@ -1643,29 +1577,63 @@ h2.title {
   flex-shrink: 0;
 }
 .phone-frame {
-  background: #1A1A1A;
-  border-radius: 28px;
-  padding: 10px;
-  box-shadow: 0 20px 50px rgba(0,0,0,.15);
+  position: relative;
+  background: linear-gradient(160deg, #3a3a3c 0%, #1c1c1e 42%, #0a0a0a 100%);
+  border-radius: 40px;
+  padding: 11px;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.12),
+    inset 0 1px 0 rgba(255,255,255,.14),
+    0 24px 50px rgba(0,0,0,.22),
+    0 8px 16px rgba(0,0,0,.12);
+}
+.phone-frame::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: 96px;
+  width: 3px;
+  height: 28px;
+  background: #2a2a2c;
+  border-radius: 2px 0 0 2px;
+  box-shadow: 0 42px 0 0 #2a2a2c, 0 78px 0 #2a2a2c;
+}
+.phone-frame::after {
+  content: "";
+  position: absolute;
+  right: -2px;
+  top: 128px;
+  width: 3px;
+  height: 56px;
+  background: #2a2a2c;
+  border-radius: 0 2px 2px 0;
 }
 .phone-screen {
+  position: relative;
   background: #ECE5DD;
-  border-radius: 20px;
+  border-radius: 30px;
   overflow: hidden;
   min-height: 400px;
-}
-.phone-notch {
-  height: 24px;
-  background: #1A1A1A;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+}
+/* iPhone Dynamic Island */
+.phone-notch {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  width: 92px;
+  height: 26px;
+  background: #000;
+  border-radius: 20px;
+  display: block;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.06);
 }
 .phone-notch span {
-  width: 60px;
-  height: 6px;
-  background: #333;
-  border-radius: 3px;
+  display: none;
 }
 
 /* UI components inside mockups */
@@ -1731,6 +1699,9 @@ h2.title {
   padding: 12px 14px;
   font-size: 12px;
   font-weight: 600;
+}
+.phone-screen > .wa-header:first-child {
+  padding-top: 40px;
 }
 .wa-bubble {
   margin: 10px 12px;
@@ -2545,13 +2516,11 @@ table.data tr:last-child td { border-bottom: none; }
   }
 
   .phone--pro,
-  .phone--promo,
   .wa-phone-showcase .phone--pro {
-    width: min(240px, 72vw);
+    width: min(248px, 72vw);
   }
 
-  .phone--pro .phone-screen,
-  .phone-promo-screen {
+  .phone--pro .phone-screen {
     min-height: 360px;
   }
 
