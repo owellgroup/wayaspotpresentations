@@ -1367,6 +1367,97 @@ h2.title {
   line-height: 1.1;
 }
 
+.rsvp-showcase {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  min-height: 0;
+  margin-top: 4px;
+}
+.rsvp-phone-col {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rsvp-phone-col .phone--pro {
+  width: 248px;
+}
+.rsvp-phone-col .phone--pro .phone-screen {
+  min-height: 500px;
+}
+.rsvp-laptop-col {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.rsvp-flow-arrow {
+  flex-shrink: 0;
+  width: 48px;
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rsvp-flow-arrow svg {
+  width: 48px;
+  height: 28px;
+}
+.rsvp-caption {
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+  color: var(--gray-500);
+}
+.rsvp-phone-col .wa-chat-body--promo {
+  justify-content: flex-start;
+  overflow-y: auto;
+  gap: 5px;
+  padding: 8px 8px 6px;
+}
+.rsvp-phone-col .wa-msg-card img {
+  height: 72px;
+}
+.rsvp-phone-col .wa-msg-card-body {
+  padding: 7px 9px 4px;
+}
+.rsvp-phone-col .wa-msg-card-body strong {
+  font-size: 10px;
+}
+.rsvp-phone-col .wa-form-card--rsvp .wa-form-field {
+  padding: 5px 9px;
+}
+.wa-form-card--rsvp {
+  margin: 0;
+  align-self: flex-start;
+  width: 94%;
+  max-width: 220px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+}
+.wa-form-card--rsvp .wa-form-card-head {
+  font-size: 11px;
+  padding: 9px 11px;
+}
+.wa-form-card--rsvp .wa-form-field {
+  padding: 6px 10px;
+}
+.wa-form-card--rsvp .wa-form-field label {
+  font-size: 7px;
+}
+.wa-form-card--rsvp .wa-form-field input,
+.wa-form-card--rsvp .wa-form-field select {
+  font-size: 10px;
+  padding: 2px 0;
+}
+.wa-form-card--rsvp .wa-form-submit {
+  font-size: 10px;
+  padding: 9px;
+}
+
 /* WhatsApp form mock */
 .wa-form-screen {
   background: #ECE5DD;
@@ -2297,6 +2388,20 @@ table.data tr:last-child td { border-bottom: none; }
   .biz-model-grid {
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+
+  .rsvp-showcase {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .rsvp-flow-arrow {
+    transform: rotate(90deg);
+    height: 36px;
+  }
+
+  .rsvp-phone-col .phone--pro {
+    width: min(248px, 72vw);
   }
 
   .device-shot img {
