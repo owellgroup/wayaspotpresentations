@@ -282,6 +282,46 @@ h2.title {
   font-size: 10px;
   margin-bottom: 4px;
 }
+
+/* Business operating model (slide 5) */
+.biz-model-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+  flex: 1;
+  align-content: start;
+}
+.biz-model-card {
+  border: 1px solid var(--gray-300);
+  background: var(--gray-50);
+  padding: 18px 16px;
+  min-height: 0;
+}
+.biz-model-num {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  color: var(--green-dark);
+  margin-bottom: 8px;
+}
+.biz-model-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.biz-model-card p {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--gray-700);
+}
+.biz-model-card em {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--black);
+}
 .card h3 {
   font-size: 15px;
   font-weight: 700;
@@ -2252,6 +2292,11 @@ table.data tr:last-child td { border-bottom: none; }
   .product-modules {
     grid-template-columns: 1fr;
     gap: 14px;
+  }
+
+  .biz-model-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .device-shot img {
