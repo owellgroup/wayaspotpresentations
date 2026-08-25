@@ -254,9 +254,9 @@ h2.title {
 
 .product-modules {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-top: 14px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  margin-top: 12px;
   flex: 1;
   min-height: 0;
   align-content: start;
