@@ -1369,93 +1369,112 @@ h2.title {
 
 .rsvp-showcase {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 14px;
   flex: 1;
   min-height: 0;
-  margin-top: 4px;
+  margin-top: 6px;
 }
-.rsvp-phone-col {
-  flex: 0 0 auto;
+.rsvp-step {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 0 0 auto;
 }
-.rsvp-phone-col .phone--pro {
-  width: 248px;
-}
-.rsvp-phone-col .phone--pro .phone-screen {
-  min-height: 500px;
-}
-.rsvp-laptop-col {
+.rsvp-step--laptop {
   flex: 1;
   min-width: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  max-width: 520px;
+  align-items: stretch;
+}
+.rsvp-step-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--green-dark);
+  margin-bottom: 8px;
+  text-align: center;
+}
+.phone--rsvp {
+  width: 210px;
+}
+.phone--rsvp .phone-frame {
+  border-radius: 36px;
+  padding: 10px;
+}
+.phone--rsvp .phone-screen {
+  min-height: 420px;
+  border-radius: 28px;
+}
+.phone--rsvp .phone-notch {
+  top: 16px;
+  width: 78px;
+  height: 22px;
+}
+.rsvp-invite-body {
+  justify-content: flex-end;
+  padding: 10px 8px;
+  gap: 6px;
+}
+.rsvp-invite-body .wa-msg-card {
+  width: 100%;
+  max-width: none;
+}
+.rsvp-invite-body .wa-msg-card img {
+  height: 88px;
+}
+.rsvp-invite-body .wa-msg-actions {
+  width: 100%;
+  max-width: none;
+}
+.rsvp-form-screen {
+  min-height: 420px;
+  padding-bottom: 10px;
+}
+.rsvp-form-screen > .wa-header {
+  padding-top: 38px;
+  font-size: 11px;
+}
+.rsvp-form-screen .wa-form-card {
+  margin: 8px 10px;
+}
+.rsvp-form-screen .wa-form-field {
+  padding: 6px 10px;
+}
+.rsvp-form-screen .wa-form-field label {
+  font-size: 7px;
+}
+.rsvp-form-screen .wa-form-field input,
+.rsvp-form-screen .wa-form-field select {
+  font-size: 10px;
+}
+.rsvp-form-screen .wa-form-submit {
+  font-size: 10px;
+  padding: 8px;
+}
+.rsvp-laptop {
+  width: 100%;
+  max-width: 100%;
+}
+.rsvp-laptop .laptop-screen {
+  aspect-ratio: 16 / 9;
 }
 .rsvp-flow-arrow {
   flex-shrink: 0;
-  width: 48px;
+  width: 36px;
+  height: 420px;
   color: var(--green);
   display: flex;
   align-items: center;
   justify-content: center;
+  align-self: center;
+  margin-top: 22px;
 }
 .rsvp-flow-arrow svg {
-  width: 48px;
-  height: 28px;
-}
-.rsvp-caption {
-  font-size: 11px;
-  font-weight: 600;
-  margin-top: 10px;
-  text-align: center;
-  color: var(--gray-500);
-}
-.rsvp-phone-col .wa-chat-body--promo {
-  justify-content: flex-start;
-  overflow-y: auto;
-  gap: 5px;
-  padding: 8px 8px 6px;
-}
-.rsvp-phone-col .wa-msg-card img {
-  height: 72px;
-}
-.rsvp-phone-col .wa-msg-card-body {
-  padding: 7px 9px 4px;
-}
-.rsvp-phone-col .wa-msg-card-body strong {
-  font-size: 10px;
-}
-.rsvp-phone-col .wa-form-card--rsvp .wa-form-field {
-  padding: 5px 9px;
-}
-.wa-form-card--rsvp {
-  margin: 0;
-  align-self: flex-start;
-  width: 94%;
-  max-width: 220px;
-  box-shadow: 0 2px 8px rgba(0,0,0,.12);
-}
-.wa-form-card--rsvp .wa-form-card-head {
-  font-size: 11px;
-  padding: 9px 11px;
-}
-.wa-form-card--rsvp .wa-form-field {
-  padding: 6px 10px;
-}
-.wa-form-card--rsvp .wa-form-field label {
-  font-size: 7px;
-}
-.wa-form-card--rsvp .wa-form-field input,
-.wa-form-card--rsvp .wa-form-field select {
-  font-size: 10px;
-  padding: 2px 0;
-}
-.wa-form-card--rsvp .wa-form-submit {
-  font-size: 10px;
-  padding: 9px;
+  width: 36px;
+  height: 24px;
 }
 
 /* WhatsApp form mock */
@@ -2392,16 +2411,23 @@ table.data tr:last-child td { border-bottom: none; }
 
   .rsvp-showcase {
     flex-direction: column;
+    align-items: center;
     gap: 16px;
   }
 
   .rsvp-flow-arrow {
+    height: 28px;
+    margin-top: 0;
     transform: rotate(90deg);
-    height: 36px;
   }
 
-  .rsvp-phone-col .phone--pro {
-    width: min(248px, 72vw);
+  .rsvp-step--laptop {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .phone--rsvp {
+    width: min(210px, 70vw);
   }
 
   .device-shot img {

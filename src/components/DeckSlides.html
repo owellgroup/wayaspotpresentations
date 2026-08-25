@@ -686,20 +686,18 @@
     <span class="slide-num">11 / 24</span>
   </div>
   <div class="slide-body">
-    <div class="api-badge" style="margin-bottom:8px;">In-WhatsApp Form · Per Business Profile</div>
+    <div class="api-badge" style="margin-bottom:6px;">In-WhatsApp Form · Per Business Profile</div>
     <div class="eyebrow">WhatsApp RSVP</div>
-    <h2 class="title">Invite on WhatsApp. RSVP form opens in chat. Data lands in Wayaspot.</h2>
-    <p class="subtitle" style="max-width:960px;margin-bottom:12px;">Guests tap <strong>RSVP</strong> on the event message — a WhatsApp form opens inside the chat. They enter their details; Wayaspot stores every response on that business’s dashboard instantly.</p>
+    <h2 class="title" style="font-size:30px;">Invite → RSVP form in WhatsApp → stored in Wayaspot.</h2>
+    <p class="subtitle" style="max-width:920px;margin-bottom:10px;font-size:15px;">Guests tap RSVP on the invite. A form opens inside WhatsApp. Every response is saved live on that business’s Wayaspot dashboard.</p>
     <div class="rsvp-showcase">
-      <div class="rsvp-phone-col">
-        <div class="phone phone--pro">
+      <div class="rsvp-step">
+        <div class="rsvp-step-label">1 · Invite</div>
+        <div class="phone phone--pro phone--rsvp">
           <div class="phone-frame">
             <div class="phone-notch"><span></span></div>
             <div class="phone-screen wa-chat-screen">
-              <div class="phone-status-bar">
-                <span>18:42</span>
-                <span class="status-icons">▂▄▆█</span>
-              </div>
+              <div class="phone-status-bar"><span>18:40</span><span class="status-icons">▂▄▆█</span></div>
               <div class="wa-chat-header">
                 <span class="wa-back">‹</span>
                 <div class="wa-avatar">C</div>
@@ -708,74 +706,87 @@
                   <div class="wa-contact-sub">online</div>
                 </div>
               </div>
-              <div class="wa-chat-body wa-chat-body--promo">
+              <div class="wa-chat-body rsvp-invite-body">
                 <div class="wa-chat-date">Today</div>
                 <div class="wa-msg-card">
-                  <img src="/cchub-event-banner.png" alt="CcHub Summit invite">
+                  <img src="/cchub-event-banner.png" alt="Event invite">
                   <div class="wa-msg-card-body">
                     <span class="wa-event-tag">Event Invite</span>
-                    <strong>Innovation & Startup Summit 2026</strong>
-                    <p>Sat 15 March · Windhoek · Limited seats</p>
+                    <strong>Startup Summit 2026</strong>
+                    <p>Sat 15 March · Windhoek</p>
                   </div>
                   <div class="wa-msg-card-foot">18:40 ✓✓</div>
                 </div>
                 <div class="wa-msg-actions">
                   <div class="wa-msg-action">RSVP Now</div>
                 </div>
-                <div class="wa-bubble wa-bubble--out">RSVP Now</div>
-                <div class="wa-bubble-meta">18:41 ✓✓</div>
-                <div class="wa-form-card wa-form-card--rsvp">
-                  <div class="wa-form-card-head">RSVP Form</div>
-                  <div class="wa-form-field"><label>Full Name</label><input type="text" value="Nina Katjimune" readonly></div>
-                  <div class="wa-form-field"><label>Email</label><input type="text" value="nina.k@email.com" readonly></div>
-                  <div class="wa-form-field"><label>Phone Number</label><input type="text" value="+264 81 777 0199" readonly></div>
-                  <div class="wa-form-field"><label>Number of Guests</label><input type="text" value="2" readonly></div>
-                  <div class="wa-form-field"><label>Attendance</label><select disabled><option>Yes — I’ll attend</option></select></div>
-                  <div class="wa-form-submit">Submit RSVP</div>
-                </div>
+              </div>
+              <div class="wa-chat-composer">
+                <div class="wa-composer-input">Message</div>
+                <div class="wa-mic" aria-hidden="true"></div>
               </div>
             </div>
           </div>
         </div>
-        <p class="rsvp-caption">1 · WhatsApp invite → 2 · In-chat RSVP form</p>
       </div>
+
       <div class="rsvp-flow-arrow" aria-hidden="true">
-        <svg viewBox="0 0 72 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4 20 H52" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M48 8 L64 20 L48 32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <svg viewBox="0 0 48 32" fill="none"><path d="M4 16 H30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M26 6 L40 16 L26 26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </div>
-      <div class="rsvp-laptop-col">
-        <div class="laptop" style="max-width:100%;">
+
+      <div class="rsvp-step">
+        <div class="rsvp-step-label">2 · Form in chat</div>
+        <div class="phone phone--pro phone--rsvp">
+          <div class="phone-frame">
+            <div class="phone-notch"><span></span></div>
+            <div class="phone-screen wa-form-screen rsvp-form-screen">
+              <div class="wa-header">CcHub Namibia · RSVP</div>
+              <div class="wa-bubble wa-bubble--in" style="font-size:10px;">Please complete your RSVP details below.</div>
+              <div class="wa-form-card">
+                <div class="wa-form-card-head">RSVP Form</div>
+                <div class="wa-form-field"><label>Full Name</label><input type="text" value="Nina Katjimune" readonly></div>
+                <div class="wa-form-field"><label>Email</label><input type="text" value="nina.k@email.com" readonly></div>
+                <div class="wa-form-field"><label>Phone Number</label><input type="text" value="+264 81 777 0199" readonly></div>
+                <div class="wa-form-field"><label>Number of Guests</label><input type="text" value="2" readonly></div>
+                <div class="wa-form-field"><label>Attendance</label><select disabled><option>Yes — I’ll attend</option></select></div>
+                <div class="wa-form-submit">Submit RSVP</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rsvp-flow-arrow" aria-hidden="true">
+        <svg viewBox="0 0 48 32" fill="none"><path d="M4 16 H30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M26 6 L40 16 L26 26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+
+      <div class="rsvp-step rsvp-step--laptop">
+        <div class="rsvp-step-label">3 · Stored in Wayaspot</div>
+        <div class="laptop rsvp-laptop">
           <div class="laptop-bezel">
             <div class="laptop-screen">
-              <div class="ui-bar">Wayaspot RSVP Dashboard <span>CcHub Namibia</span></div>
-              <div class="ui-nav">
-                <span class="on">RSVPs</span><span>Event</span><span>Guests</span><span>Export</span>
-              </div>
-              <div class="ui-body">
+              <div class="ui-bar">RSVP Dashboard <span>CcHub Namibia</span></div>
+              <div class="ui-body" style="padding:10px 12px;">
                 <div class="ui-stat-row">
-                  <div class="ui-stat"><div class="v">480</div><div class="l">Total RSVPs</div></div>
+                  <div class="ui-stat"><div class="v">480</div><div class="l">RSVPs</div></div>
                   <div class="ui-stat"><div class="v">412</div><div class="l">Attending</div></div>
                   <div class="ui-stat"><div class="v">48</div><div class="l">Maybe</div></div>
-                  <div class="ui-stat"><div class="v">20</div><div class="l">Declined</div></div>
                 </div>
                 <table class="ui-table">
-                  <tr><th>Guest</th><th>Phone</th><th>Guests</th><th>Attendance</th><th>Status</th></tr>
-                  <tr><td>Nina Katjimune</td><td>+264 81 777 0199</td><td>2</td><td>Yes</td><td><span class="ui-tag">New</span></td></tr>
-                  <tr><td>Grace Shikongo</td><td>+264 81 555 0192</td><td>1</td><td>Yes</td><td><span class="ui-tag">Confirmed</span></td></tr>
-                  <tr><td>James Kambala</td><td>+264 85 120 3344</td><td>3</td><td>Maybe</td><td><span class="ui-tag">Pending</span></td></tr>
-                  <tr><td>Peter Nambahu</td><td>+264 81 900 1122</td><td>1</td><td>Yes</td><td><span class="ui-tag">Confirmed</span></td></tr>
+                  <tr><th>Guest</th><th>Guests</th><th>Status</th></tr>
+                  <tr><td>Nina Katjimune</td><td>2</td><td><span class="ui-tag">New</span></td></tr>
+                  <tr><td>Grace Shikongo</td><td>1</td><td><span class="ui-tag">Confirmed</span></td></tr>
+                  <tr><td>James Kambala</td><td>3</td><td><span class="ui-tag">Pending</span></td></tr>
+                  <tr><td>Peter Nambahu</td><td>1</td><td><span class="ui-tag">Confirmed</span></td></tr>
                 </table>
               </div>
             </div>
           </div>
           <div class="laptop-base"></div>
         </div>
-        <p class="rsvp-caption">3 · RSVP data stored live in the Wayaspot dashboard</p>
       </div>
     </div>
-    <div class="keyline">No website. No app download. Guests RSVP inside WhatsApp — every submission is stored under that business’s Wayaspot profile.</div>
+    <div class="keyline">No website. No app download. Guests RSVP inside WhatsApp — data is stored under that business’s Wayaspot profile.</div>
   </div>
 </section>
 
